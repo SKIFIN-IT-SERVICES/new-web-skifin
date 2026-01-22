@@ -1,0 +1,331 @@
+.subsman-page {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+/* Hero Section */
+.subsman-hero {
+    padding: var(--space-24) 0 var(--space-16);
+    text-align: center;
+    position: relative;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.subsman-hero .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+}
+
+/* 3D Elements */
+.subsman-hero .hero-3d-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    perspective: 1000px;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    /* Moved further right to avoid text overlap */
+    transform: translateY(-50%) rotateY(-15deg);
+    width: 140px;
+    height: 280px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    border: 4px solid #333;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.app-header {
+    height: 40px;
+    background: var(--color-primary);
+}
+
+.app-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-card {
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 6px;
+}
+
+.c1 {
+    width: 90%;
+}
+
+.c2 {
+    width: 80%;
+    align-self: flex-end;
+    background: #e0e0e0;
+}
+
+.c3 {
+    width: 100%;
+    height: 80px;
+}
+
+/* Delivery Box */
+.delivery-box {
+    position: absolute;
+    top: 20%;
+    /* Moved up */
+    left: 5%;
+    /* Moved further left */
+    color: white;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+/* Map Markers */
+.map-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.map-marker::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.m1 {
+    bottom: 15%;
+    left: 5%;
+    opacity: 0.6;
+}
+
+.m2 {
+    top: 20%;
+    right: 5%;
+    opacity: 0.4;
+}
+
+.m3 {
+    bottom: 10%;
+    right: 25%;
+    opacity: 0.5;
+}
+
+/* Route Line */
+.route-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    opacity: 0.5;
+}
+
+/* Hero Content */
+.subsman-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.subsman-hero .hero-badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.subsman-hero .hero-title {
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--space-4);
+}
+
+.subsman-hero .hero-description {
+    font-size: var(--font-size-xl);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto var(--space-6);
+}
+
+.subsman-hero .hero-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subsman-hero .hero-buttons .btn-primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.subsman-hero .hero-buttons .btn-outline {
+    border-color: white;
+    color: white;
+}
+
+.subsman-hero .hero-buttons .btn-outline:hover {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Stats Section */
+.subsman-stats {
+    padding: var(--space-12) 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+}
+
+.subsman-stats .stat-item {
+    text-align: center;
+}
+
+.subsman-stats .stat-value {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.subsman-stats .stat-label {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* Features Section */
+.subsman-features {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.feature-card {
+    text-align: center;
+    background: white;
+    border: 2px solid var(--color-primary);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    margin: 0 auto var(--space-4);
+    color: var(--color-primary);
+}
+
+.feature-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.feature-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+/* CTA Section */
+.subsman-cta {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.cta-card {
+    text-align: center;
+    padding: var(--space-16);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+}
+
+.cta-card h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    color: white;
+}
+
+.cta-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+}
+
+.cta-card .btn {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .subsman-hero .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-3d-elements {
+        opacity: 0.4;
+    }
+}

@@ -1,0 +1,38 @@
+.section-title {
+    margin-bottom: var(--space-12);
+}
+
+.section-title.centered {
+    text-align: center;
+}
+
+.section-title .title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+    color: var(--color-primary);
+}
+
+.section-title.light .title {
+    color: var(--color-text-primary);
+}
+
+.section-title .subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+}
+
+.section-title.centered .subtitle {
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .section-title .title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .section-title .subtitle {
+        font-size: var(--font-size-base);
+    }
+}

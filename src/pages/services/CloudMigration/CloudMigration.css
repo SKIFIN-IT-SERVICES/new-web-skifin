@@ -1,0 +1,372 @@
+.cloud-migration-page {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+/* Hero Section */
+.cloud-migration-page .service-hero {
+    padding: var(--space-24) 0 var(--space-16);
+    text-align: center;
+    position: relative;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.cloud-migration-page .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+}
+
+/* 3D Elements */
+.cloud-migration-page .hero-3d-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    perspective: 1000px;
+}
+
+/* Floating Clouds */
+.cloud {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.2);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.cloud-1 {
+    top: 15%;
+    left: 10%;
+}
+
+.cloud-2 {
+    top: 40%;
+    right: 10%;
+}
+
+.cloud-3 {
+    bottom: 20%;
+    left: 20%;
+}
+
+/* Upload Animation */
+.upload-container {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.server-icon,
+.cloud-target {
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.particles {
+    flex: 1;
+    width: 2px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+}
+
+.particle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Satellite Orbit */
+.satellite-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(60deg);
+}
+
+.satellite {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.satellite .body {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 2px;
+}
+
+.satellite .solar-panel {
+    width: 15px;
+    height: 8px;
+    background: #444;
+    border: 1px solid #666;
+}
+
+/* Hero Content */
+.cloud-migration-page .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.cloud-migration-page .hero-badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.cloud-migration-page h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--space-4);
+}
+
+.cloud-migration-page .hero-description {
+    font-size: var(--font-size-xl);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto var(--space-6);
+}
+
+.cloud-migration-page .hero-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cloud-migration-page .hero-buttons .btn-primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.cloud-migration-page .hero-buttons .btn-outline {
+    border-color: white;
+    color: white;
+}
+
+.cloud-migration-page .hero-buttons .btn-outline:hover {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Inherited Styles */
+.cloud-migration-page .service-stats {
+    padding: var(--space-12) 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cloud-migration-page .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+}
+
+.cloud-migration-page .stat-item {
+    text-align: center;
+}
+
+.cloud-migration-page .stat-value {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.cloud-migration-page .stat-label {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.cloud-migration-page .service-features {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.cloud-migration-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.cloud-migration-page .feature-card {
+    text-align: center;
+    background: white;
+    border: 2px solid var(--color-primary);
+}
+
+.cloud-migration-page .feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    margin: 0 auto var(--space-4);
+    color: var(--color-primary);
+}
+
+.cloud-migration-page .feature-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.cloud-migration-page .feature-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+.cloud-migration-page .service-process {
+    padding: var(--space-24) 0;
+    background: #FFFFFF;
+}
+
+.cloud-migration-page .process-timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    position: relative;
+}
+
+.cloud-migration-page .process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: var(--color-primary);
+    opacity: 0.3;
+}
+
+.cloud-migration-page .process-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.cloud-migration-page .step-number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    margin: 0 auto var(--space-4);
+    position: relative;
+    z-index: 1;
+}
+
+.cloud-migration-page .step-content h4 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.cloud-migration-page .step-content p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.cloud-migration-page .service-cta {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.cloud-migration-page .cta-card {
+    text-align: center;
+    padding: var(--space-16);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+}
+
+.cloud-migration-page .cta-card h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    color: white;
+}
+
+.cloud-migration-page .cta-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+}
+
+.cloud-migration-page .cta-card .btn {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .cloud-migration-page .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cloud-migration-page .process-timeline {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    .cloud-migration-page .process-timeline::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cloud-migration-page h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .cloud-migration-page .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cloud-migration-page .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cloud-migration-page .hero-3d-elements {
+        opacity: 0.4;
+    }
+}

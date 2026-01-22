@@ -1,0 +1,355 @@
+.aiml-page {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+/* Hero Section */
+.aiml-page .service-hero {
+    padding: var(--space-24) 0 var(--space-16);
+    text-align: center;
+    position: relative;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.aiml-page .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+}
+
+/* 3D Elements */
+.aiml-page .hero-3d-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    perspective: 1000px;
+}
+
+/* Neural Network Nodes */
+.neuron {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.n1-1 {
+    top: 30%;
+    left: 10%;
+}
+
+.n1-2 {
+    bottom: 30%;
+    left: 10%;
+}
+
+.n2-1 {
+    top: 20%;
+    left: 20%;
+}
+
+.n2-2 {
+    bottom: 20%;
+    left: 20%;
+}
+
+.n3-1 {
+    top: 50%;
+    left: 30%;
+}
+
+/* Data Streams */
+.data-stream {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.stream-1 {
+    right: 15%;
+    top: 0;
+    bottom: 0;
+}
+
+.stream-2 {
+    right: 25%;
+    top: 0;
+    bottom: 0;
+}
+
+/* Brain Pulse */
+.brain-pulse {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Data Cubes */
+.data-cube {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cube-1 {
+    top: 20%;
+    right: 10%;
+}
+
+.cube-2 {
+    bottom: 25%;
+    right: 8%;
+}
+
+/* Hero Content */
+.aiml-page .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.aiml-page .hero-badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.aiml-page h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--space-4);
+}
+
+.aiml-page .hero-description {
+    font-size: var(--font-size-xl);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto var(--space-6);
+}
+
+.aiml-page .hero-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aiml-page .hero-buttons .btn-primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.aiml-page .hero-buttons .btn-outline {
+    border-color: white;
+    color: white;
+}
+
+.aiml-page .hero-buttons .btn-outline:hover {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Inherited Styles */
+.aiml-page .service-stats {
+    padding: var(--space-12) 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.aiml-page .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+}
+
+.aiml-page .stat-item {
+    text-align: center;
+}
+
+.aiml-page .stat-value {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.aiml-page .stat-label {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.aiml-page .service-features {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.aiml-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.aiml-page .feature-card {
+    text-align: center;
+    background: white;
+    border: 2px solid var(--color-primary);
+}
+
+.aiml-page .feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    margin: 0 auto var(--space-4);
+    color: var(--color-primary);
+}
+
+.aiml-page .feature-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.aiml-page .feature-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+.aiml-page .service-process {
+    padding: var(--space-24) 0;
+    background: #FFFFFF;
+}
+
+.aiml-page .process-timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    position: relative;
+}
+
+.aiml-page .process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: var(--color-primary);
+    opacity: 0.3;
+}
+
+.aiml-page .process-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.aiml-page .step-number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    margin: 0 auto var(--space-4);
+    position: relative;
+    z-index: 1;
+}
+
+.aiml-page .step-content h4 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.aiml-page .step-content p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.aiml-page .service-cta {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.aiml-page .cta-card {
+    text-align: center;
+    padding: var(--space-16);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+}
+
+.aiml-page .cta-card h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    color: white;
+}
+
+.aiml-page .cta-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+}
+
+.aiml-page .cta-card .btn {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .aiml-page .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aiml-page .process-timeline {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    .aiml-page .process-timeline::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .aiml-page h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .aiml-page .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aiml-page .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aiml-page .hero-3d-elements {
+        opacity: 0.4;
+    }
+}

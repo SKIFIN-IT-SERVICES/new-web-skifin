@@ -1,0 +1,39 @@
+.card {
+    border-radius: var(--radius-2xl);
+    padding: var(--space-6);
+    transition: all var(--transition-base);
+}
+
+/* Variants */
+.card-default {
+    background: #FFFFFF;
+    border: 2px solid var(--color-primary);
+    box-shadow: var(--shadow-card);
+}
+
+.card-glass {
+    background: #FFFFFF;
+    border: 2px solid var(--color-primary);
+    box-shadow: var(--shadow-card);
+}
+
+.card-gradient {
+    background: var(--gradient-hero);
+    border: none;
+    color: white;
+}
+
+.card-outlined {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+}
+
+/* Hover Effects */
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-glass.card-hover:hover {
+    box-shadow: var(--shadow-lg);
+}

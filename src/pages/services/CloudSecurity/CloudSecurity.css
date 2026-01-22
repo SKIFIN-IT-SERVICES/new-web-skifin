@@ -1,0 +1,346 @@
+.cloud-security-page {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+/* Hero Section */
+.cloud-security-page .service-hero {
+    padding: var(--space-24) 0 var(--space-16);
+    text-align: center;
+    position: relative;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.cloud-security-page .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+}
+
+/* 3D Security Elements */
+.cloud-security-page .hero-3d-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Shield Container */
+.shield-container {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.25);
+    transform-style: preserve-3d;
+}
+
+/* Scan Line */
+.scan-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+/* Lock Floats */
+.lock-float {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.lock-1 {
+    top: 25%;
+    left: 10%;
+}
+
+.lock-2 {
+    bottom: 30%;
+    right: 8%;
+}
+
+/* Hexagon Grid */
+.hex-grid {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cpath fill='rgba(255,255,255,0.15)' d='M14 0L0 12.25v24.5L14 49l14-12.25v-24.5z'/%3E%3C/svg%3E");
+}
+
+/* Alert Pulses */
+.alert-pulse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.pulse-1 {
+    top: 30%;
+    left: 20%;
+}
+
+.pulse-2 {
+    bottom: 35%;
+    right: 25%;
+}
+
+/* Hero Content */
+.cloud-security-page .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.cloud-security-page .hero-badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.cloud-security-page h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--space-4);
+}
+
+.cloud-security-page .hero-description {
+    font-size: var(--font-size-xl);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto var(--space-6);
+}
+
+.cloud-security-page .hero-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cloud-security-page .hero-buttons .btn-primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.cloud-security-page .hero-buttons .btn-outline {
+    border-color: white;
+    color: white;
+}
+
+.cloud-security-page .hero-buttons .btn-outline:hover {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Import shared service styles */
+.cloud-security-page .service-stats,
+.cloud-security-page .service-features,
+.cloud-security-page .service-process,
+.cloud-security-page .service-cta {
+    /* These inherit from AIAutomation or can be defined here */
+}
+
+.cloud-security-page .service-stats {
+    padding: var(--space-12) 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cloud-security-page .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+}
+
+.cloud-security-page .stat-item {
+    text-align: center;
+}
+
+.cloud-security-page .stat-value {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.cloud-security-page .stat-label {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.cloud-security-page .service-features {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.cloud-security-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.cloud-security-page .feature-card {
+    text-align: center;
+    background: white;
+    border: 2px solid var(--color-primary);
+}
+
+.cloud-security-page .feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    margin: 0 auto var(--space-4);
+    color: var(--color-primary);
+}
+
+.cloud-security-page .feature-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.cloud-security-page .feature-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+.cloud-security-page .service-process {
+    padding: var(--space-24) 0;
+    background: #FFFFFF;
+}
+
+.cloud-security-page .process-timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    position: relative;
+}
+
+.cloud-security-page .process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: var(--color-primary);
+    opacity: 0.3;
+}
+
+.cloud-security-page .process-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.cloud-security-page .step-number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    margin: 0 auto var(--space-4);
+    position: relative;
+    z-index: 1;
+}
+
+.cloud-security-page .step-content h4 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.cloud-security-page .step-content p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.cloud-security-page .service-cta {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.cloud-security-page .cta-card {
+    text-align: center;
+    padding: var(--space-16);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+}
+
+.cloud-security-page .cta-card h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    color: white;
+}
+
+.cloud-security-page .cta-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+}
+
+.cloud-security-page .cta-card .btn {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .cloud-security-page .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cloud-security-page .process-timeline {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    .cloud-security-page .process-timeline::before {
+        display: none;
+    }
+
+    .shield-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cloud-security-page h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .cloud-security-page .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cloud-security-page .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cloud-security-page .hero-3d-elements {
+        opacity: 0.4;
+    }
+}
