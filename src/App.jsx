@@ -7,8 +7,8 @@ import PageLoader from './components/common/PageLoader'
 import ErrorBoundary from './components/error/ErrorBoundary'
 import ScrollToTop from './components/common/ScrollToTop'
 
-// Initialize GA4 with a placeholder ID - User to replace later
-ReactGA.initialize("G-XXXXXXXXXX")
+// Initialize GA4 with ID from environment variables
+ReactGA.initialize(import.meta.env.VITE_GA_MEASUREMENT_ID)
 
 // Lazy loaded pages for code splitting
 const Home = lazy(() => import('./pages/Home/Home'))
