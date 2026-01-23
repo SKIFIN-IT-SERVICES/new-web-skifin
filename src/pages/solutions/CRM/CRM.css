@@ -113,6 +113,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 1000px;
+}
+
+.crm-connections {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: visible;
 }
 
 .float-card {
@@ -184,6 +195,26 @@
     height: 300px;
     position: relative;
     z-index: 1;
+    transform-style: preserve-3d;
+}
+
+.data-point {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+.data-point.p1 {
+    bottom: 60%;
+    left: 40%;
+}
+
+.data-point.p2 {
+    bottom: 70%;
+    right: 30%;
 }
 
 .glass-panel {
@@ -350,6 +381,19 @@
     border-radius: 8px;
     position: relative;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.col-header {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-dim);
+    margin-bottom: 0.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .pipeline-col.active {
@@ -358,15 +402,70 @@
 }
 
 .deal-card {
-    height: 60px;
-    background: var(--color-secondary);
+    height: 70px;
+    background: white;
     border-radius: 6px;
-    margin-bottom: 0.5rem;
-    opacity: 0.8;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.deal-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.deal-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.d-line {
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.d-line.short {
+    width: 60%;
+}
+
+.deal-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.6rem;
+    background: rgba(255, 122, 61, 0.1);
+    color: var(--color-primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
 }
 
 .deal-card.static {
     background: rgba(255, 255, 255, 0.1);
+}
+
+.deal-card.success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.deal-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #22c55e;
+    font-size: 1.5rem;
 }
 
 /* CTA Section */

@@ -79,6 +79,43 @@ const CRM = () => {
                     </div>
 
                     <div className="crm-hero-visual">
+                        {/* Connecting Lines (Data Flow) */}
+                        <svg className="crm-connections" viewBox="0 0 500 400">
+                            <motion.path
+                                d="M 50 100 Q 150 50 250 150"
+                                stroke="rgba(255, 122, 61, 0.3)"
+                                strokeWidth="2"
+                                fill="none"
+                                initial={{ pathLength: 0, opacity: 0 }}
+                                animate={{ pathLength: 1, opacity: 1 }}
+                                transition={{ duration: 2, ease: "easeOut" }}
+                            />
+                            <motion.path
+                                d="M 450 300 Q 350 350 250 250"
+                                stroke="rgba(255, 122, 61, 0.3)"
+                                strokeWidth="2"
+                                fill="none"
+                                initial={{ pathLength: 0, opacity: 0 }}
+                                animate={{ pathLength: 1, opacity: 1 }}
+                                transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+                            />
+                            {/* Moving Particles on lines */}
+                            <motion.circle r="3" fill="#ff7a3d">
+                                <motion.animateMotion
+                                    dur="3s"
+                                    repeatCount="indefinite"
+                                    path="M 50 100 Q 150 50 250 150"
+                                />
+                            </motion.circle>
+                            <motion.circle r="3" fill="#ff7a3d">
+                                <motion.animateMotion
+                                    dur="4s"
+                                    repeatCount="indefinite"
+                                    path="M 450 300 Q 350 350 250 250"
+                                />
+                            </motion.circle>
+                        </svg>
+
                         <ParallaxFloat speed={-0.5} className="float-card card-1">
                             <div className="card-icon"><FiUsers /></div>
                             <div className="card-info">
@@ -97,7 +134,17 @@ const CRM = () => {
                             <div className="card-trend up">+2.4%</div>
                         </ParallaxFloat>
 
-                        <div className="main-dashboard-preview">
+                        {/* 3D Dashboard Container */}
+                        <motion.div
+                            className="main-dashboard-preview"
+                            initial={{ rotateY: -15, rotateX: 5 }}
+                            animate={{
+                                rotateY: [-15, -5, -15],
+                                rotateX: [5, 0, 5],
+                                y: [-10, 10, -10]
+                            }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                        >
                             <div className="glass-panel">
                                 <div className="panel-header">
                                     <div className="dots">
@@ -109,6 +156,17 @@ const CRM = () => {
                                     <div className="graph-placeholder">
                                         <div className="graph-line"></div>
                                         <div className="graph-area"></div>
+                                        {/* Animated Data Points */}
+                                        <motion.div
+                                            className="data-point p1"
+                                            animate={{ scale: [1, 1.5, 1] }}
+                                            transition={{ duration: 2, repeat: Infinity }}
+                                        />
+                                        <motion.div
+                                            className="data-point p2"
+                                            animate={{ scale: [1, 1.5, 1] }}
+                                            transition={{ duration: 2, delay: 1, repeat: Infinity }}
+                                        />
                                     </div>
                                     <div className="stats-row">
                                         <div className="stat-block"></div>
@@ -117,7 +175,7 @@ const CRM = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -185,15 +243,56 @@ const CRM = () => {
                     </div>
                     <div className="pipeline-visual">
                         <div className="pipeline-mockup">
-                            <div className="pipeline-col"></div>
-                            <div className="pipeline-col"></div>
+                            {/* Columbia: Leads */}
+                            <div className="pipeline-col">
+                                <div className="col-header">Leads</div>
+                                <div className="deal-card static">
+                                    <div className="deal-avatar" />
+                                    <div className="deal-lines">
+                                        <div className="d-line" />
+                                        <div className="d-line short" />
+                                    </div>
+                                </div>
+                                <div className="deal-card static">
+                                    <div className="deal-avatar" />
+                                    <div className="deal-lines">
+                                        <div className="d-line" />
+                                        <div className="d-line short" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Column: Negotiation */}
                             <div className="pipeline-col active">
+                                <div className="col-header">Negotiation</div>
                                 <motion.div
                                     className="deal-card"
-                                    animate={{ y: [0, 10, 0] }}
+                                    animate={{
+                                        y: [0, 40, 0],
+                                        boxShadow: ["0 2px 5px rgba(0,0,0,0.1)", "0 10px 20px rgba(0,0,0,0.2)", "0 2px 5px rgba(0,0,0,0.1)"]
+                                    }}
                                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                />
-                                <div className="deal-card static"></div>
+                                >
+                                    <div className="deal-avatar" />
+                                    <div className="deal-lines">
+                                        <div className="d-line" />
+                                        <div className="d-line short" />
+                                    </div>
+                                    <div className="deal-tag">High Value</div>
+                                </motion.div>
+                            </div>
+
+                            {/* Column: Won */}
+                            <div className="pipeline-col">
+                                <div className="col-header">Won</div>
+                                <div className="deal-card static success">
+                                    <div className="deal-avatar" />
+                                    <div className="deal-lines">
+                                        <div className="d-line" />
+                                        <div className="d-line short" />
+                                    </div>
+                                    <div className="deal-icon"><FiCheck /></div>
+                                </div>
                             </div>
                         </div>
                     </div>
