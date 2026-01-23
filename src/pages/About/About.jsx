@@ -5,6 +5,7 @@ import SectionTitle from '../../components/common/SectionTitle'
 import Card from '../../components/common/Card'
 import Button from '../../components/common/Button'
 import FadeIn from '../../components/animations/FadeIn'
+import SEO from '../../components/common/SEO'
 import './About.css'
 
 const values = [
@@ -48,6 +49,12 @@ const About = memo(function About() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="About Us - Skifin"
+                description="Learn about Skifin's mission to revolutionize IT services through Artificial Intelligence and human ingenuity."
+                keywords="About Skifin, AI Company, IT Consulting, Tech Team"
+            />
+
             {/* Hero Section with 3D Elements */}
             <section className="about-hero">
                 <div className="hero-bg-pattern" />

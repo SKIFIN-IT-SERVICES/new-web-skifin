@@ -5,6 +5,7 @@ import SectionTitle from '../../../components/common/SectionTitle'
 import Card from '../../../components/common/Card'
 import Button from '../../../components/common/Button'
 import FadeIn from '../../../components/animations/FadeIn'
+import SEO from '../../../components/common/SEO'
 import './AIMLSolutions.css'
 
 const features = [
@@ -67,6 +68,11 @@ const AIMLSolutions = memo(function AIMLSolutions() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="AI & Machine Learning Solutions - Skifin"
+                description="Unlock the power of Generative AI, Computer Vision, and Predictive Analytics for your business."
+                keywords="AI Solutions, Machine Learning, Generative AI, Computer Vision, MLOps"
+            />
             {/* Hero Section with 3D Neural Network Elements */}
             <section className="service-hero">
                 <div className="hero-bg-pattern" />

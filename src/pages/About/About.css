@@ -293,8 +293,6 @@
     padding: var(--space-16);
     background: var(--gradient-primary);
     border-radius: var(--radius-2xl);
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .about-cta h2 {

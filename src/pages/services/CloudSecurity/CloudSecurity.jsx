@@ -6,6 +6,7 @@ import Card from '../../../components/common/Card'
 import Button from '../../../components/common/Button'
 import FadeIn from '../../../components/animations/FadeIn'
 import ParallaxFloat from '../../../components/animations/ParallaxFloat'
+import SEO from '../../../components/common/SEO'
 import './CloudSecurity.css'
 
 const features = [
@@ -68,6 +69,11 @@ const CloudSecurity = memo(function CloudSecurity() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Cloud Security Services - Skifin"
+                description="Secure your cloud infrastructure with Zero Trust, CSPM, and AI-driven threat detection."
+                keywords="Cloud Security, Zero Trust, CSPM, Threat Detection, Cyber Security"
+            />
             {/* Hero with 3D Security Elements */}
             <section className="service-hero">
                 <div className="hero-bg-pattern" />

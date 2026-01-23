@@ -79,7 +79,7 @@ const Footer = memo(function Footer() {
                             </li>
                             <li>
                                 <FiMapPin />
-                                <span>B-27, Sector 64, Noida, Uttar Pradesh</span>
+                                <span>Galaxy Business Park, Sector 62, Noida</span>
                             </li>
                         </ul>
                     </div>

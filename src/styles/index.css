@@ -200,9 +200,9 @@ a:hover {
 
 .text-gradient {
   background: var(--gradient-primary);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .glass {

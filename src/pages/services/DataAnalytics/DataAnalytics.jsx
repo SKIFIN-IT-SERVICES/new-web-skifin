@@ -6,6 +6,7 @@ import Card from '../../../components/common/Card'
 import Button from '../../../components/common/Button'
 import FadeIn from '../../../components/animations/FadeIn'
 import ParallaxFloat from '../../../components/animations/ParallaxFloat'
+import SEO from '../../../components/common/SEO'
 import './DataAnalytics.css'
 
 const features = [
@@ -68,6 +69,11 @@ const DataAnalytics = memo(function DataAnalytics() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Data Analytics Services - Skifin"
+                description="Transform raw data into actionable insights with Business Intelligence and Big Data Analytics."
+                keywords="Data Analytics, Business Intelligence, Big Data, Predictive Analytics, Data Visualization"
+            />
             {/* Hero Section with 3D Data Elements */}
             <section className="service-hero">
                 <div className="hero-bg-pattern" />

@@ -1,12 +1,20 @@
-import { memo, useState, useCallback } from 'react'
+import { memo, useState, useCallback, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { FiMail, FiPhone, FiMapPin, FiSend, FiCheck } from 'react-icons/fi'
+import { FiMail, FiPhone, FiMapPin, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi'
 import SectionTitle from '../../components/common/SectionTitle'
 import Button from '../../components/common/Button'
 import FadeIn from '../../components/animations/FadeIn'
+import SEO from '../../components/common/SEO'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
+// Placeholder EmailJS keys
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"
+
 const Contact = memo(function Contact() {
+    const formRef = useRef()
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,6 +24,7 @@ const Contact = memo(function Contact() {
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
+    const [error, setError] = useState(null)
 
     const handleChange = useCallback((e) => {
         const { name, value } = e.target
@@ -25,18 +34,33 @@ const Contact = memo(function Contact() {
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault()
         setIsSubmitting(true)
+        setError(null)
 
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 1500))
+        try {
+            // Check if using placeholder keys - Simulate success for demo purposes
+            if (EMAILJS_SERVICE_ID === "YOUR_SERVICE_ID") {
+                await new Promise(resolve => setTimeout(resolve, 1500)) // Simulate network delay
+                console.log("Simulating successful submission (Placeholder Keys detected)")
+            } else {
+                // Real EmailJS submission
+                await emailjs.sendForm(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID,
+                    formRef.current,
+                    EMAILJS_PUBLIC_KEY
+                )
+            }
 
-        setIsSubmitting(false)
-        setIsSubmitted(true)
-
-        // Reset after showing success
-        setTimeout(() => {
+            setIsSubmitted(true)
             setFormData({ name: '', email: '', company: '', service: '', message: '' })
-            setIsSubmitted(false)
-        }, 3000)
+
+            setTimeout(() => setIsSubmitted(false), 5000)
+        } catch (err) {
+            console.error('EmailJS Error:', err)
+            setError('Failed to send message. Please verify your EmailJS keys.')
+        } finally {
+            setIsSubmitting(false)
+        }
     }, [])
 
     return (
@@ -46,6 +70,11 @@ const Contact = memo(function Contact() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Contact Skifin - AI & IT Consulting"
+                description="Get in touch with Skifin for your AI and IT consultancy needs. We are ready to help you scale."
+                keywords="Contact Skifin, Hire AI Developers, IT Support, Tech Consultation"
+            />
             {/* Hero Section with 3D Elements */}
             <section className="contact-hero">
                 <div className="hero-bg-pattern" />
@@ -147,7 +176,12 @@ const Contact = memo(function Contact() {
                         <FadeIn direction="right">
                             <div className="contact-form-wrapper">
                                 <h2>Send Us a Message</h2>
-                                <form onSubmit={handleSubmit} className="contact-form">
+                                <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
+                                    {error && (
+                                        <div className="form-error">
+                                            <FiAlertCircle /> {error}
+                                        </div>
+                                    )}
                                     <div className="form-row">
                                         <div className="form-group">
                                             <label htmlFor="name">Full Name *</label>
@@ -269,7 +303,7 @@ const Contact = memo(function Contact() {
                                         </div>
                                         <div className="info-content">
                                             <h4>Location</h4>
-                                            <span>B-27, Sector 64, Noida, Uttar Pradesh</span>
+                                            <span>Galaxy Business Park, Sector 62, Noida</span>
                                         </div>
                                     </div>
                                 </div>

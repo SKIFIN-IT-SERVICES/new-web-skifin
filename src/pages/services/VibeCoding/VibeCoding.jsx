@@ -5,6 +5,7 @@ import SectionTitle from '../../../components/common/SectionTitle'
 import Button from '../../../components/common/Button'
 import FadeIn from '../../../components/animations/FadeIn'
 import ParallaxFloat from '../../../components/animations/ParallaxFloat'
+import SEO from '../../../components/common/SEO'
 import './VibeCoding.css'
 
 const Typewriter = ({ text, delay = 0 }) => {
@@ -52,6 +53,11 @@ const VibeCoding = memo(function VibeCoding() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Vibe Coding - AI-Augmented Software Development | Skifin"
+                description="Experience the future of coding with AI-augmented velocity. Building products at the speed of thought."
+                keywords="Vibe Coding, AI Programming, Rapid Development, Software Engineering, AI Agents"
+            />
             {/* Animated Hero Section */}
             <section className="vibe-hero">
                 <div className="hero-bg-pattern" />
@@ -190,6 +196,162 @@ const VibeCoding = memo(function VibeCoding() {
                 </div>
             </section>
 
+            {/* Vibe Engineering Section */}
+            <section className="vibe-engineering">
+                <div className="container">
+                    <SectionTitle title="The Engineering Behind the Vibe" subtitle="Orchestration at Scale" centered />
+
+                    <div className="engineering-grid">
+                        <FadeIn delay={0.1}>
+                            <div className="eng-card">
+                                <div className="eng-icon">
+                                    <FiCpu />
+                                </div>
+                                <h3>Smart Context</h3>
+                                <p>
+                                    Our context-aware agents analyze your entire codebase, understanding dependencies and patterns to generate code that fits perfectly.
+                                </p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.2}>
+                            <div className="eng-card">
+                                <div className="eng-icon">
+                                    <FiZap />
+                                </div>
+                                <h3>Agent Orchestration</h3>
+                                <p>
+                                    Multiple specialized AI agents work in parallel - one for logic, one for types, one for tests - coordinated to deliver complete features.
+                                </p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.3}>
+                            <div className="eng-card">
+                                <div className="eng-icon">
+                                    <FiCode />
+                                </div>
+                                <h3>Instant Feedback</h3>
+                                <p>
+                                    Real-time linting, type-checking, and error correction happen micro-seconds after generation, ensuring "Green Build" quality.
+                                </p>
+                            </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pair Programming Section */}
+            <section className="vibe-pair-programming">
+                <div className="container">
+                    <div className="pair-grid">
+                        <FadeIn direction="right">
+                            <div className="pair-visual">
+                                <img src="/images/vibe-coding-hybrid.png" alt="AI Human Collaboration" className="pair-image" />
+                            </div>
+                        </FadeIn>
+                        <FadeIn direction="left">
+                            <div className="pair-content">
+                                <SectionTitle title="AI Pair Programming" subtitle="Two Minds, One Goal" />
+                                <p>
+                                    Imagine a senior engineer who never sleeps, knows every library documentation by heart, and types at the speed of light. That's your AI pair programmer.
+                                </p>
+                                <p>
+                                    We don't just use autocomplete. We engage in deep, strategic dialogue with our AI tools, refining architecture and logic in real-time. It's a dance of human creativity and machine efficiency.
+                                </p>
+                                <ul className="pair-list">
+                                    <li>Real-time vulnerability scanning</li>
+                                    <li>Automated refactoring suggestions</li>
+                                    <li>Instant documentation generation</li>
+                                </ul>
+                            </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* Workflow Section */}
+            <section className="vibe-workflow">
+                <div className="container">
+                    <SectionTitle title="From Brainwave to Binary" subtitle="The Vibe Process" centered />
+                    <div className="workflow-timeline">
+                        <FadeIn delay={0.1}>
+                            <div className="timeline-item">
+                                <div className="step-number">01</div>
+                                <h3>Intent</h3>
+                                <p>You declare what you want in plain English. "I need a scalable user auth system."</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.2}>
+                            <div className="timeline-item">
+                                <div className="step-number">02</div>
+                                <h3>Agent Spin-up</h3>
+                                <p>Our orchestrator spawns specialized agents to plan the architecture and select the stack.</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.3}>
+                            <div className="timeline-item">
+                                <div className="step-number">03</div>
+                                <h3>Generation</h3>
+                                <p>Code is generated at 100x human speed, including tests and documentation.</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.4}>
+                            <div className="timeline-item">
+                                <div className="step-number">04</div>
+                                <h3>Human Polish</h3>
+                                <p>Expert engineers review the output, refining "the vibe" and handling edge cases.</p>
+                            </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+            {/* Comparison Section */}
+            <section className="vibe-comparison">
+                <div className="container">
+                    <div className="comparison-wrapper">
+                        <FadeIn direction="right">
+                            <div className="compare-card traditional">
+                                <h3>Traditional Dev</h3>
+                                <ul>
+                                    <li>🐢 Weeks to MVP</li>
+                                    <li>🐛 Manual bug hunting</li>
+                                    <li>📝 Endless boilerplate</li>
+                                    <li>😴 Developer fatigue</li>
+                                </ul>
+                            </div>
+                        </FadeIn>
+                        <div className="vs-badge">VS</div>
+                        <FadeIn direction="left">
+                            <div className="compare-card vibe-mode">
+                                <h3>⚡ Vibe Mode</h3>
+                                <ul>
+                                    <li>🚀 Days to MVP</li>
+                                    <li>🛡️ Auto-healing code</li>
+                                    <li>🧠 Focus on Logic</li>
+                                    <li>🔥 Pure creative flow</li>
+                                </ul>
+                            </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+            {/* Tech Stack Section */}
+            <section className="vibe-stack">
+                <div className="container">
+                    <SectionTitle title="Vibe-Ready Technologies" subtitle="We Speak Every Language" centered />
+                    <FadeIn>
+                        <div className="stack-grid">
+                            {['React', 'Python', 'Node.js', 'TypeScript', 'AWS', 'Docker', 'Kubernetes', 'Go'].map((tech, i) => (
+                                <div key={i} className="stack-item">{tech}</div>
+                            ))}
+                        </div>
+                    </FadeIn>
+                </div>
+            </section>
+
             {/* Benefits Section */}
             <section className="vibe-benefits">
                 <div className="container">
@@ -249,7 +411,7 @@ const VibeCoding = memo(function VibeCoding() {
                     </FadeIn>
                 </div>
             </section>
-        </motion.div>
+        </motion.div >
     )
 })
 

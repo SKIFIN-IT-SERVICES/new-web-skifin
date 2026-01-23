@@ -6,6 +6,7 @@ import Card from '../../../components/common/Card'
 import Button from '../../../components/common/Button'
 import FadeIn from '../../../components/animations/FadeIn'
 import ParallaxFloat from '../../../components/animations/ParallaxFloat'
+import SEO from '../../../components/common/SEO'
 import './DevOps.css'
 
 const features = [
@@ -68,6 +69,11 @@ const DevOps = memo(function DevOps() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="DevOps & DevSecOps Services - Skifin"
+                description="Accelerate delivery with CI/CD, GitOps, and Platform Engineering solutions."
+                keywords="DevOps, DevSecOps, CI/CD, Kubernetes, GitOps, Platform Engineering"
+            />
             {/* Hero Section with 3D DevOps Elements */}
             <section className="service-hero">
                 <div className="hero-bg-pattern" />

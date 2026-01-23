@@ -5,6 +5,7 @@ import SectionTitle from '../../components/common/SectionTitle'
 import Card from '../../components/common/Card'
 import Button from '../../components/common/Button'
 import FadeIn from '../../components/animations/FadeIn'
+import SEO from '../../components/common/SEO'
 import './Subsman.css'
 
 const features = [
@@ -58,6 +59,11 @@ const Subsman = memo(function Subsman() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Subsman - Smart Subscription & Delivery Management"
+                description="Streamline your delivery business with Subsman. Automated scheduling, route optimization, and customer apps."
+                keywords="Delivery Management, Subscription Software, Route Optimization, Last Mile Delivery"
+            />
             {/* Hero Section with 3D App Elements */}
             <section className="subsman-hero">
                 <div className="hero-bg-pattern" />

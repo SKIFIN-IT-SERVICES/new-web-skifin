@@ -5,6 +5,7 @@ import SectionTitle from '../../../components/common/SectionTitle'
 import Card from '../../../components/common/Card'
 import Button from '../../../components/common/Button'
 import FadeIn from '../../../components/animations/FadeIn'
+import SEO from '../../../components/common/SEO'
 import './CloudMigration.css'
 
 const features = [
@@ -67,6 +68,11 @@ const CloudMigration = memo(function CloudMigration() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Cloud Migration & Modernization - Skifin"
+                description="Expert cloud migration services to AWS, Azure, and GCP. Modernize your infrastructure today."
+                keywords="Cloud Migration, Application Modernization, Hybrid Cloud, Multi-Cloud, Serverless"
+            />
             {/* Hero Section with 3D Cloud Elements */}
             <section className="service-hero">
                 <div className="hero-bg-pattern" />

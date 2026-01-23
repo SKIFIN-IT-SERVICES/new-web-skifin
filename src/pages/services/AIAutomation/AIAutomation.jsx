@@ -6,6 +6,7 @@ import Card from '../../../components/common/Card'
 import Button from '../../../components/common/Button'
 import FadeIn from '../../../components/animations/FadeIn'
 import ParallaxFloat from '../../../components/animations/ParallaxFloat'
+import SEO from '../../../components/common/SEO'
 import './AIAutomation.css'
 
 const features = [
@@ -68,6 +69,11 @@ const AIAutomation = memo(function AIAutomation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="AI Automation Services - Skifin"
+                description="Leverage Agentic AI, RPA, and Hyperautomation to streamline operations and drive efficiency."
+                keywords="AI Automation, RPA, Hyperautomation, Agentic AI, Process Automation"
+            />
             {/* Hero Section with 3D Elements */}
             <section className="service-hero">
                 <div className="hero-bg-pattern" />

@@ -8,6 +8,7 @@ import Button from '../../components/common/Button'
 import FadeIn from '../../components/animations/FadeIn'
 import ParallaxFloat from '../../components/animations/ParallaxFloat'
 import TextReveal from '../../components/animations/TextReveal'
+import SEO from '../../components/common/SEO'
 import './Home.css'
 
 const services = [
@@ -77,6 +78,12 @@ const Home = memo(function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <SEO
+                title="Skifin - AI-Driven IT Services & Consulting"
+                description="Transform your business with Skifin's AI automation, cloud security, and DevOps solutions. We deliver intelligent software for the future."
+                keywords="AI Analysis, Cloud Security, DevOps, Machine Learning, Digital Transformation"
+            />
+
             {/* Hero Section with 3D Animated Elements */}
             <section className="hero-section">
                 <div className="hero-bg">

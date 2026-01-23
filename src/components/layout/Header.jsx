@@ -14,15 +14,16 @@ const services = [
     { path: '/services/vibe-coding', label: 'Vibe Coding' },
 ]
 
-const products = [
-    { path: '/products/subsman', label: 'Subsman Vendor Platform' },
+const solutions = [
+    { path: '/solutions/subsman', label: 'Subsman United Platform' },
+    { path: '/solutions/crm', label: 'CRM System' },
 ]
 
 const Header = memo(function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isServicesOpen, setIsServicesOpen] = useState(false)
-    const [isProductsOpen, setIsProductsOpen] = useState(false)
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
     const location = useLocation()
 
     // Memoize the services dropdown content
@@ -47,8 +48,8 @@ const Header = memo(function Header() {
         </motion.div>
     ), [])
 
-    // Memoize the products dropdown content
-    const productsDropdown = useMemo(() => (
+    // Memoize the solutions dropdown content
+    const solutionsDropdown = useMemo(() => (
         <motion.div
             className="services-dropdown"
             initial={{ opacity: 0, y: 10 }}
@@ -56,14 +57,14 @@ const Header = memo(function Header() {
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2 }}
         >
-            {products.map((product) => (
+            {solutions.map((solution) => (
                 <NavLink
-                    key={product.path}
-                    to={product.path}
+                    key={solution.path}
+                    to={solution.path}
                     className="dropdown-item"
-                    onClick={() => setIsProductsOpen(false)}
+                    onClick={() => setIsSolutionsOpen(false)}
                 >
-                    {product.label}
+                    {solution.label}
                 </NavLink>
             ))}
         </motion.div>
@@ -81,7 +82,7 @@ const Header = memo(function Header() {
     useEffect(() => {
         setIsMobileMenuOpen(false)
         setIsServicesOpen(false)
-        setIsProductsOpen(false)
+        setIsSolutionsOpen(false)
     }, [location])
 
     return (
@@ -111,14 +112,14 @@ const Header = memo(function Header() {
 
                     <div
                         className="nav-dropdown"
-                        onMouseEnter={() => setIsProductsOpen(true)}
-                        onMouseLeave={() => setIsProductsOpen(false)}
+                        onMouseEnter={() => setIsSolutionsOpen(true)}
+                        onMouseLeave={() => setIsSolutionsOpen(false)}
                     >
                         <button className="nav-link dropdown-trigger">
-                            Products <FiChevronDown className={isProductsOpen ? 'rotated' : ''} />
+                            Solutions <FiChevronDown className={isSolutionsOpen ? 'rotated' : ''} />
                         </button>
                         <AnimatePresence>
-                            {isProductsOpen && productsDropdown}
+                            {isSolutionsOpen && solutionsDropdown}
                         </AnimatePresence>
                     </div>
 
@@ -184,25 +185,25 @@ const Header = memo(function Header() {
                         <div className="mobile-dropdown">
                             <button
                                 className="nav-link-mobile dropdown-trigger-mobile"
-                                onClick={() => setIsProductsOpen(!isProductsOpen)}
+                                onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                             >
-                                Products <FiChevronDown className={isProductsOpen ? 'rotated' : ''} />
+                                Solutions <FiChevronDown className={isSolutionsOpen ? 'rotated' : ''} />
                             </button>
                             <AnimatePresence>
-                                {isProductsOpen && (
+                                {isSolutionsOpen && (
                                     <motion.div
                                         className="mobile-dropdown-items"
                                         initial={{ opacity: 0, height: 0 }}
                                         animate={{ opacity: 1, height: 'auto' }}
                                         exit={{ opacity: 0, height: 0 }}
                                     >
-                                        {products.map((product) => (
+                                        {solutions.map((solution) => (
                                             <NavLink
-                                                key={product.path}
-                                                to={product.path}
+                                                key={solution.path}
+                                                to={solution.path}
                                                 className="nav-link-mobile sub"
                                             >
-                                                {product.label}
+                                                {solution.label}
                                             </NavLink>
                                         ))}
                                     </motion.div>
