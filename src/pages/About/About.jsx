@@ -209,7 +209,7 @@ const About = memo(function About() {
             <section className="about-cta">
                 <div className="container">
                     <FadeIn>
-                        <div className="cta-content">
+                        <div className="cta-card">
                             <h2>Ready to Work Together?</h2>
                             <p>Let's discuss how we can help your business thrive.</p>
                             <Button to="/contact" size="lg" icon={<FiArrowRight />} iconPosition="right">

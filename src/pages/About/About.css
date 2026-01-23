@@ -288,22 +288,30 @@
     background: var(--color-bg-light);
 }
 
-.about-cta .cta-content {
+.about-cta .cta-card {
     text-align: center;
-    max-width: 600px;
+    padding: var(--space-16);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .about-cta h2 {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--space-4);
-    color: var(--color-primary);
+    color: white;
 }
 
 .about-cta p {
     font-size: var(--font-size-lg);
-    color: var(--color-text-secondary);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--space-8);
+}
+
+.about-cta .cta-card .btn {
+    background: white;
+    color: var(--color-primary);
 }
 
 /* Responsive */

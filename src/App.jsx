@@ -13,6 +13,7 @@ const DevOps = lazy(() => import('./pages/services/DevOps/DevOps'))
 const AIMLSolutions = lazy(() => import('./pages/services/AIMLSolutions/AIMLSolutions'))
 const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics/DataAnalytics'))
 const CloudMigration = lazy(() => import('./pages/services/CloudMigration/CloudMigration'))
+const VibeCoding = lazy(() => import('./pages/services/VibeCoding/VibeCoding'))
 const About = lazy(() => import('./pages/About/About'))
 const Contact = lazy(() => import('./pages/Contact/Contact'))
 const Subsman = lazy(() => import('./pages/Subsman/Subsman'))
@@ -33,6 +34,7 @@ function App() {
                                 <Route path="/services/ai-ml-solutions" element={<AIMLSolutions />} />
                                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                                 <Route path="/services/cloud-migration" element={<CloudMigration />} />
+                                <Route path="/services/vibe-coding" element={<VibeCoding />} />
                                 <Route path="/about" element={<About />} />
                                 <Route path="/contact" element={<Contact />} />
                                 <Route path="/products/subsman" element={<Subsman />} />

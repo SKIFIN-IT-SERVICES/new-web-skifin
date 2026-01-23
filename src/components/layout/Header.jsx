@@ -11,6 +11,7 @@ const services = [
     { path: '/services/ai-ml-solutions', label: 'AI/ML Solutions' },
     { path: '/services/data-analytics', label: 'Data Analytics' },
     { path: '/services/cloud-migration', label: 'Cloud Migration' },
+    { path: '/services/vibe-coding', label: 'Vibe Coding' },
 ]
 
 const products = [

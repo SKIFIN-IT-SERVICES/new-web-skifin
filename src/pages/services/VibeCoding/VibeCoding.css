@@ -1,0 +1,453 @@
+.vibe-page {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+/* Hero Section */
+.vibe-page .vibe-hero {
+    padding: var(--space-24) 0 var(--space-16);
+    text-align: center;
+    position: relative;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.vibe-page .hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.vibe-page .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+}
+
+/* 3D Elements */
+.vibe-page .hero-3d-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    perspective: 1200px;
+}
+
+/* Floating Code Bubbles */
+.code-bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-xl);
+    color: white;
+    font-family: monospace;
+    font-size: var(--font-size-sm);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+}
+
+.code-bubble pre {
+    margin: 0;
+    font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: var(--color-primary);
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Scan Line Animation */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: scan 3s linear infinite;
+    opacity: 0;
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+/* Binary Stream Animation */
+.binary-stream {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: monospace;
+    font-size: 1rem;
+    user-select: none;
+    pointer-events: none;
+    white-space: pre;
+    line-height: 1;
+}
+
+.concept-visual {
+    position: relative;
+    height: 400px;
+    background: #000000;
+    /* Match image background for seamless look */
+    border-radius: var(--radius-3xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    /* Allow image to float out if needed, or just not cut */
+}
+
+.concept-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Fill the box as requested */
+    mix-blend-mode: luminosity;
+    /* Black/Grayscale initially */
+    filter: grayscale(100%) brightness(0.8);
+    transition: all 0.5s ease;
+}
+
+.concept-visual:hover .concept-image {
+    mix-blend-mode: normal;
+    filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 20px rgba(79, 70, 229, 0.6));
+    /* Glow on hover */
+    transform: scale(1.02);
+}
+
+.bubble-1 {
+    top: 20%;
+    left: 10%;
+    transform: rotate(-5deg);
+}
+
+.bubble-2 {
+    bottom: 25%;
+    right: 12%;
+    transform: rotate(5deg);
+}
+
+.bubble-3 {
+    top: 30%;
+    right: 15%;
+    transform: rotate(3deg);
+}
+
+/* New Floating Syntax Elements */
+.float-syntax {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    font-size: 2rem;
+    pointer-events: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.syntax-1 {
+    top: 15%;
+    left: 20%;
+    font-size: 3rem;
+}
+
+.syntax-2 {
+    bottom: 20%;
+    left: 15%;
+    font-size: 2.5rem;
+}
+
+.syntax-3 {
+    top: 40%;
+    right: 25%;
+    font-size: 2rem;
+}
+
+.syntax-4 {
+    bottom: 30%;
+    right: 35%;
+    font-size: 2.5rem;
+}
+
+/* Data Packet Particles */
+.data-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* Energy Flows/Orbs */
+.energy-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.6;
+}
+
+.orb-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+    top: -10%;
+    right: -5%;
+}
+
+.orb-2 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    bottom: 10%;
+    left: 5%;
+}
+
+/* Hero Content */
+.vibe-page .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.vibe-page .hero-badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+}
+
+.vibe-page h1 {
+    font-size: var(--font-size-6xl);
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--space-6);
+    line-height: 1.1;
+}
+
+.vibe-page .hero-description {
+    font-size: var(--font-size-xl);
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 800px;
+    margin: 0 auto var(--space-8);
+}
+
+.hero-btn {
+    background: white !important;
+    color: var(--color-primary) !important;
+    border: none !important;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+.hero-btn:hover {
+    background: #f8fafc !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Concept Section */
+.vibe-concept {
+    padding: var(--space-24) 0;
+    background: #FFFFFF;
+}
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.concept-content h2 {
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-6);
+}
+
+.concept-content p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-6);
+}
+
+.concept-visual {
+    position: relative;
+    height: 400px;
+    background: var(--color-bg-light);
+    border-radius: var(--radius-3xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.concept-icon {
+    font-size: 8rem;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Benefits Grid */
+.vibe-benefits {
+    padding: var(--space-24) 0;
+    background: var(--color-bg-light);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+}
+
+.benefit-card {
+    background: white;
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-6);
+}
+
+.benefit-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.benefit-card p {
+    color: var(--color-text-secondary);
+}
+
+/* Vibe CTA */
+.vibe-cta {
+    padding: var(--space-24) 0;
+    background: #FFFFFF;
+}
+
+.vibe-cta .cta-card {
+    text-align: center;
+    padding: var(--space-16);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+}
+
+.vibe-cta h2 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-4);
+    color: white;
+}
+
+.vibe-cta p {
+    font-size: var(--font-size-xl);
+    opacity: 0.9;
+    margin-bottom: var(--space-8);
+}
+
+.vibe-cta .btn {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .concept-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .vibe-page h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-3d-elements {
+        opacity: 0.5;
+    }
+}
