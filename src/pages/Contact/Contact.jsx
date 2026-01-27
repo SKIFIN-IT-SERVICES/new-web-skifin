@@ -5,13 +5,9 @@ import SectionTitle from '../../components/common/SectionTitle'
 import Button from '../../components/common/Button'
 import FadeIn from '../../components/animations/FadeIn'
 import SEO from '../../components/common/SEO'
-import emailjs from '@emailjs/browser'
+// Google Script URL from environment variables
+const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL
 import './Contact.css'
-
-// EmailJS keys from environment variables
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 const Contact = memo(function Contact() {
     const formRef = useRef()
@@ -37,18 +33,23 @@ const Contact = memo(function Contact() {
         setError(null)
 
         try {
-            // Check if using placeholder keys - Simulate success for demo purposes
-            if (EMAILJS_SERVICE_ID === "YOUR_SERVICE_ID") {
-                await new Promise(resolve => setTimeout(resolve, 1500)) // Simulate network delay
-                console.log("Simulating successful submission (Placeholder Keys detected)")
+            // Check if using placeholder URL - Simulate success for demo purposes
+            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes("YOUR_GOOGLE_SCRIPT")) {
+                await new Promise(resolve => setTimeout(resolve, 1500))
+                console.log("Simulating successful submission (URL not configured)")
             } else {
-                // Real EmailJS submission
-                await emailjs.sendForm(
-                    EMAILJS_SERVICE_ID,
-                    EMAILJS_TEMPLATE_ID,
-                    formRef.current,
-                    EMAILJS_PUBLIC_KEY
-                )
+                // Post to Google Apps Script
+                const formData = new FormData(formRef.current)
+                const searchParams = new URLSearchParams()
+                for (const [key, value] of formData.entries()) {
+                    searchParams.append(key, value)
+                }
+
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    body: searchParams,
+                    mode: 'no-cors' // Google Scripts require no-cors for simple cross-origin posts
+                })
             }
 
             setIsSubmitted(true)
@@ -56,8 +57,8 @@ const Contact = memo(function Contact() {
 
             setTimeout(() => setIsSubmitted(false), 5000)
         } catch (err) {
-            console.error('EmailJS Error:', err)
-            setError('Failed to send message. Please verify your EmailJS keys.')
+            console.error('Submission Error:', err)
+            setError('Failed to send message. Please try again later.')
         } finally {
             setIsSubmitting(false)
         }

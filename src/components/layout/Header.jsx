@@ -15,7 +15,7 @@ const services = [
 ]
 
 const solutions = [
-    { path: '/solutions/subsman', label: 'Subsman United Platform' },
+    { path: '/solutions/subsman', label: 'Subsman Vendor Platform' },
     { path: '/solutions/crm', label: 'CRM System' },
 ]
 

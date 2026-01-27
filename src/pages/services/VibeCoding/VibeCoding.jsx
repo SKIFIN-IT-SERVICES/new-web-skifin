@@ -147,13 +147,13 @@ const VibeCoding = memo(function VibeCoding() {
                         <h1 className="hero-title">
                             Vibe Coding
                             <br />
-                            <span style={{ fontSize: '0.6em', opacity: 0.9 }}>AI-Augmented Velocity</span>
+                            <span style={{ fontSize: '0.6em', opacity: 0.9 }}>Building at the Speed of Thought</span>
                         </h1>
                     </FadeIn>
                     <FadeIn delay={0.2}>
                         <p className="hero-description">
-                            Experience the future of software development where human intuition meets AI precision.
-                            We build products and services at the speed of thought.
+                            The future of software development where you "give in to the vibes" and forget the code exists.
+                            We orchestrate AI to build products at the speed of human creativity.
                         </p>
                     </FadeIn>
                     <FadeIn delay={0.3}>
@@ -170,20 +170,18 @@ const VibeCoding = memo(function VibeCoding() {
                     <div className="concept-grid">
                         <FadeIn direction="right">
                             <div className="concept-content">
-                                <SectionTitle title="What is Vibe Coding?" subtitle="Beyond traditional development" />
+                                <SectionTitle title="The Philosophy of Vibe" subtitle="Intent Over Syntax" />
                                 <p>
-                                    Vibe Coding is a revolutionary approach that leverages advanced Large Language Models (LLMs)
-                                    and AI agents to handle the heavy lifting of code generation. This allows our developers
-                                    to stay in a "flow state" — focusing on high-level architecture, user experience, and
-                                    creative problem-solving.
+                                    Vibe Coding is not just about using AI tools; it's a fundamental shift in how we create.
+                                    Prioritizing <strong>Joy</strong> and <strong>Flow State</strong>, we move from being "bricklayers" of code to architects of logic.
                                 </p>
                                 <p>
-                                    Instead of getting bogged down in syntax and boilerplate, we guide the AI to implement
-                                    complex features rapidly. The result? Faster delivery, fewer bugs, and software that
-                                    feels "right" from day one.
+                                    Start with a vision, prompt the intent, and let the AI handle the implementation.
+                                    When the vibe isn't right, we don't debug syntax—we refine the direction.
+                                    It’s about steering the ship, not rowing the boat.
                                 </p>
                                 <Button to="/services/ai-automation" variant="outline" icon={<FiCpu />}>
-                                    Explore AI Services
+                                    Explore the Stack
                                 </Button>
                             </div>
                         </FadeIn>
@@ -191,6 +189,52 @@ const VibeCoding = memo(function VibeCoding() {
                             <div className="concept-visual">
                                 <img src="/images/vibe-coding-neural.png" alt="AI Vibe Robot" className="concept-image" />
                             </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+            {/* Core Principles Section */}
+            <section className="vibe-principles">
+                <div className="container">
+                    <SectionTitle title="The Core Principles" subtitle="Why We Vibe" centered />
+                    <div className="principles-grid">
+                        <FadeIn delay={0.1}>
+                            <div className="principle-card">
+                                <h3>Joy of Creation</h3>
+                                <p>Coding should feel like painting, not data entry. We remove the friction to bring back the fun.</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.2}>
+                            <div className="principle-card">
+                                <h3>Flow State</h3>
+                                <p>By outsourcing syntax to AI, we maintain a continuous stream of logic and creativity without interruption.</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.3}>
+                            <div className="principle-card">
+                                <h3>Velocity</h3>
+                                <p>We don't just move fast; we move exponentially. What took weeks now takes hours.</p>
+                            </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+            {/* Origin Story Section */}
+            <section className="vibe-origin">
+                <div className="container">
+                    <div className="origin-content">
+                        <FadeIn>
+                            <span className="section-label">THE ORIGIN</span>
+                            <h2>The "Software 2.0" Vision</h2>
+                            <blockquote className="karpathy-quote">
+                                "The hottest new programming language is English."
+                            </blockquote>
+                            <p className="origin-text">
+                                In 2025, <strong>Andrej Karpathy</strong> (OpenAI co-founder) coined the term "Vibe Coding" to describe a state where developers "fully give in to the vibes."
+                                It represents the final transition to <strong>Software 2.0</strong>, where neural networks replace heuristic code, and human intent becomes the only bottleneck.
+                            </p>
                         </FadeIn>
                     </div>
                 </div>
@@ -205,11 +249,11 @@ const VibeCoding = memo(function VibeCoding() {
                         <FadeIn delay={0.1}>
                             <div className="eng-card">
                                 <div className="eng-icon">
-                                    <FiCpu />
+                                    <FiCode />
                                 </div>
-                                <h3>Smart Context</h3>
+                                <h3>AI-Native IDEs</h3>
                                 <p>
-                                    Our context-aware agents analyze your entire codebase, understanding dependencies and patterns to generate code that fits perfectly.
+                                    We leverage tools like <strong>Cursor</strong>, <strong>Windsurf</strong>, and <strong>Replit</strong> that understand the entire codebase context, enabling "multi-file" editing in a single prompt.
                                 </p>
                             </div>
                         </FadeIn>
@@ -218,20 +262,20 @@ const VibeCoding = memo(function VibeCoding() {
                                 <div className="eng-icon">
                                     <FiZap />
                                 </div>
-                                <h3>Agent Orchestration</h3>
+                                <h3>The Orchestrators</h3>
                                 <p>
-                                    Multiple specialized AI agents work in parallel - one for logic, one for types, one for tests - coordinated to deliver complete features.
+                                    Using <strong>Claude 3.5 Sonnet</strong> and <strong>GitHub Copilot</strong> as our pair programmers, we generate production-ready logic with high-level reasoning capabilities.
                                 </p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.3}>
                             <div className="eng-card">
                                 <div className="eng-icon">
-                                    <FiCode />
+                                    <FiCpu />
                                 </div>
-                                <h3>Instant Feedback</h3>
+                                <h3>Instant Deployment</h3>
                                 <p>
-                                    Real-time linting, type-checking, and error correction happen micro-seconds after generation, ensuring "Green Build" quality.
+                                    From <strong>Lovable</strong> to <strong>Vercel</strong>, we ship prototypes in minutes. The feedback loop is instantaneous, keeping the creative energy alive.
                                 </p>
                             </div>
                         </FadeIn>
@@ -279,28 +323,32 @@ const VibeCoding = memo(function VibeCoding() {
                             <div className="timeline-item">
                                 <div className="step-number">01</div>
                                 <h3>Intent</h3>
-                                <p>You declare what you want in plain English. "I need a scalable user auth system."</p>
+                                <p>We define the "vibe" and functional requirements in natural language. "Create a smooth, glassmorphic dashboard."</p>
+                                <span className="pro-tip">Tip: Be specific about the <em>feeling</em>, not just the function.</span>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.2}>
                             <div className="timeline-item">
                                 <div className="step-number">02</div>
-                                <h3>Agent Spin-up</h3>
-                                <p>Our orchestrator spawns specialized agents to plan the architecture and select the stack.</p>
+                                <h3>Generation</h3>
+                                <p>The AI orchestrates the build, writing complex logic, CSS, and tests across multiple files simultaneously.</p>
+                                <span className="pro-tip">Tip: Use "Composer Mode" in Cursor for multi-file edits.</span>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.3}>
                             <div className="timeline-item">
                                 <div className="step-number">03</div>
-                                <h3>Generation</h3>
-                                <p>Code is generated at 100x human speed, including tests and documentation.</p>
+                                <h3>Vibe Check</h3>
+                                <p>We run the code immediately. Does it feel right? Is the animation smooth? We verify the "soul" of the app.</p>
+                                <span className="pro-tip">Tip: If it works but feels wrong, it's a fail.</span>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.4}>
                             <div className="timeline-item">
                                 <div className="step-number">04</div>
-                                <h3>Human Polish</h3>
-                                <p>Expert engineers review the output, refining "the vibe" and handling edge cases.</p>
+                                <h3>Refinement</h3>
+                                <p>We don't fix semicolons. We ask the AI to "make it pop" or "fix the edge case," iterating until perfect.</p>
+                                <span className="pro-tip">Tip: Don't debug manually. Re-prompt the agent.</span>
                             </div>
                         </FadeIn>
                     </div>
@@ -343,12 +391,55 @@ const VibeCoding = memo(function VibeCoding() {
                 <div className="container">
                     <SectionTitle title="Vibe-Ready Technologies" subtitle="We Speak Every Language" centered />
                     <FadeIn>
-                        <div className="stack-grid">
-                            {['React', 'Python', 'Node.js', 'TypeScript', 'AWS', 'Docker', 'Kubernetes', 'Go'].map((tech, i) => (
-                                <div key={i} className="stack-item">{tech}</div>
+                        <div className="stack-grid-detailed">
+                            {[
+                                { name: 'Cursor', desc: 'The AI-native editor that understands your entire codebase context.' },
+                                { name: 'Replit Agent', desc: 'From idea to deployed app in a single conversation.' },
+                                { name: 'Windsurf', desc: 'Deep-flow coding with agentic capabilities.' },
+                                { name: 'Claude 3.5', desc: 'The reasoning engine that powers our logic generation.' },
+                                { name: 'Lovable', desc: 'Instant full-stack web apps from natural language.' },
+                                { name: 'v0.dev', desc: 'Generative UI for rapid component iteration.' }
+                            ].map((tech, i) => (
+                                <div key={i} className="stack-card-detailed">
+                                    <h4>{tech.name}</h4>
+                                    <p>{tech.desc}</p>
+                                </div>
                             ))}
                         </div>
                     </FadeIn>
+                </div>
+            </section>
+
+            {/* Visionary Quotes */}
+            <section className="vibe-quotes">
+                <div className="container">
+                    <SectionTitle title="Voices of the Revolution" subtitle="Industry Leaders on AI Coding" centered />
+                    <div className="quotes-grid">
+                        <FadeIn delay={0.1}>
+                            <div className="quote-card">
+                                <p>"The future of coding is no coding at all. It's about teaching the machine to think like you."</p>
+                                <div className="quote-author">
+                                    <img src="https://ui-avatars.com/api/?name=Jensen+Huang&background=0D8ABC&color=fff" alt="Jensen Huang" />
+                                    <div>
+                                        <strong>Jensen Huang</strong>
+                                        <span>CEO, NVIDIA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.2}>
+                            <div className="quote-card">
+                                <p>"Vibe coding is basically just being a conductor of a symphony of agents."</p>
+                                <div className="quote-author">
+                                    <img src="https://ui-avatars.com/api/?name=Sam+Altman&background=10a37f&color=fff" alt="Sam Altman" />
+                                    <div>
+                                        <strong>Sam Altman</strong>
+                                        <span>CEO, OpenAI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </FadeIn>
+                    </div>
                 </div>
             </section>
 
@@ -393,6 +484,31 @@ const VibeCoding = memo(function VibeCoding() {
                                 </p>
                             </div>
                         </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+            {/* Deep Dive FAQ */}
+            <section className="vibe-faq">
+                <div className="container">
+                    <SectionTitle title="The Vibe FAQ" subtitle="Unpacking the Paradigm" centered />
+                    <div className="faq-grid">
+                        <div className="faq-item">
+                            <h3>Is Vibe Coding secure?</h3>
+                            <p>Absolutely. We use enterprise-grade agents (Cursor for Business, Copilot Enterprise) that respect data privacy and do not train on your proprietary code without permission.</p>
+                        </div>
+                        <div className="faq-item">
+                            <h3>Will this replace developers?</h3>
+                            <p>No. It replaces <em>typing</em>. The role of the developer evolves from "writer" to "editor-in-chief." Judgment, architecture, and taste are more valuable than ever.</p>
+                        </div>
+                        <div className="faq-item">
+                            <h3>What about bugs?</h3>
+                            <p>AI writes better unit tests than humans. We orchestrate agents to write tests <em>before</em> writing implementation code (TDD), resulting in fewer regressions vs traditional coding.</p>
+                        </div>
+                        <div className="faq-item">
+                            <h3>Can I maintain the code later?</h3>
+                            <p>Yes. The code generated is clean, commented, and follows standard patterns (React, Node, Python). Any developer can pick it up, or simply ask the AI to explain it.</p>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -293,6 +293,8 @@
     padding: var(--space-16);
     background: var(--gradient-primary);
     border-radius: var(--radius-2xl);
+    width: 100%;
+    margin: 0 auto;
 }
 
 .about-cta h2 {
@@ -305,6 +307,9 @@
     font-size: var(--font-size-lg);
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--space-8);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-cta .cta-card .btn {

@@ -320,7 +320,7 @@ const Home = memo(function Home() {
             <section className="cta-section">
                 <div className="container">
                     <FadeIn>
-                        <div className="cta-content">
+                        <div className="cta-card">
                             <h2>Ready to Transform Your Business?</h2>
                             <p>
                                 Let's discuss how our AI-powered solutions can help you achieve your goals.
