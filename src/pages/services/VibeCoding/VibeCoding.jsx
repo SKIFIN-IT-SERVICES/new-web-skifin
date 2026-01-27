@@ -398,7 +398,10 @@ const VibeCoding = memo(function VibeCoding() {
                                 { name: 'Windsurf', desc: 'Deep-flow coding with agentic capabilities.' },
                                 { name: 'Claude 3.5', desc: 'The reasoning engine that powers our logic generation.' },
                                 { name: 'Lovable', desc: 'Instant full-stack web apps from natural language.' },
-                                { name: 'v0.dev', desc: 'Generative UI for rapid component iteration.' }
+                                { name: 'v0.dev', desc: 'Generative UI for rapid component iteration.' },
+                                { name: 'Cline', desc: 'Autonomous terminal agent for complex file manipulations.' },
+                                { name: 'Antigravity', desc: "Google Deepmind's advanced agentic coding assistant." },
+                                { name: 'Code Buddy', desc: 'Collaborative AI partner for seamless development flows.' }
                             ].map((tech, i) => (
                                 <div key={i} className="stack-card-detailed">
                                     <h4>{tech.name}</h4>
