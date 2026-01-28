@@ -14,7 +14,10 @@ const Contact = memo(function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        workNumber: '',
+        mobileNumber: '',
         company: '',
+        companySize: '',
         service: '',
         message: ''
     })
@@ -53,7 +56,16 @@ const Contact = memo(function Contact() {
             }
 
             setIsSubmitted(true)
-            setFormData({ name: '', email: '', company: '', service: '', message: '' })
+            setFormData({
+                name: '',
+                email: '',
+                workNumber: '',
+                mobileNumber: '',
+                company: '',
+                companySize: '',
+                service: '',
+                message: ''
+            })
 
             setTimeout(() => setIsSubmitted(false), 5000)
         } catch (err) {
@@ -212,6 +224,32 @@ const Contact = memo(function Contact() {
 
                                     <div className="form-row">
                                         <div className="form-group">
+                                            <label htmlFor="workNumber">Work Number</label>
+                                            <input
+                                                type="tel"
+                                                id="workNumber"
+                                                name="workNumber"
+                                                value={formData.workNumber}
+                                                onChange={handleChange}
+                                                placeholder="+1 (555) 000-0000"
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="mobileNumber">Mobile Number *</label>
+                                            <input
+                                                type="tel"
+                                                id="mobileNumber"
+                                                name="mobileNumber"
+                                                value={formData.mobileNumber}
+                                                onChange={handleChange}
+                                                required
+                                                placeholder="+1 (555) 000-0000"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="form-row">
+                                        <div className="form-group">
                                             <label htmlFor="company">Company</label>
                                             <input
                                                 type="text"
@@ -223,6 +261,25 @@ const Contact = memo(function Contact() {
                                             />
                                         </div>
                                         <div className="form-group">
+                                            <label htmlFor="companySize">Company Size</label>
+                                            <select
+                                                id="companySize"
+                                                name="companySize"
+                                                value={formData.companySize}
+                                                onChange={handleChange}
+                                            >
+                                                <option value="">Select size</option>
+                                                <option value="1-10">1-10 employees</option>
+                                                <option value="11-50">11-50 employees</option>
+                                                <option value="51-200">51-200 employees</option>
+                                                <option value="201-500">201-500 employees</option>
+                                                <option value="501+">501+ employees</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div className="form-row">
+                                        <div className="form-group full-width">
                                             <label htmlFor="service">Service Interested In</label>
                                             <select
                                                 id="service"
