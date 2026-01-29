@@ -1,0 +1,80 @@
+=== DSS Presentation Structure ===
+Slide size: 9144000 x 6858000 emu (10 x 7.5 in)
+Slides: 16
+
+--- Slide-by-slide ---
+--- Slide 1 ---
+  [PLACEHOLDER (14)] Digital Security Services (DSS)
+  [PLACEHOLDER (14)] Professional & Managed Security Offerings
+
+--- Slide 2 ---
+  [PLACEHOLDER (14)] DSS Overview
+  [PLACEHOLDER (14)] Introduction to DSS Practice
+
+  🔧 Professional Services (PS)
+  🛡️ Managed Services (MS)
+
+
+Mission: Deliver end-to-end, secure, and scalable solutions across the security lifecycle.
+
+--- Slide 3 ---
+  [PLACEHOLDER (14)] Professional Services (PS)
+  [PLACEHOLDER (14)] Consulting & Assessments
+Architecture & Solution Design
+Product Deployment & Implementation
+Proof of Concepts (PoC), Pilots
+Security Audits & Gap Analysis
+
+Coverage: Across all technologies in the DSS...
+
+--- Slide 4 ---
+  [PLACEHOLDER (14)] Managed Services (MS) Overview
+
+--- Slide 5 ---
+  [PLACEHOLDER (14)] Network & Perimeter Security
+
+--- Slide 6 ---
+  [PLACEHOLDER (14)] Endpoint Security
+
+--- Slide 7 ---
+  [PLACEHOLDER (14)] Email & Messaging Security
+
+--- Slide 8 ---
+  [PLACEHOLDER (14)] Identity & Access Management (IAM)
+
+--- Slide 9 ---
+  [PLACEHOLDER (14)] Cloud Security & Zero Trust
+
+--- Slide 10 ---
+  [PLACEHOLDER (14)] Microsegmentation & Server Isolation
+
+--- Slide 11 ---
+  [PLACEHOLDER (14)] SOC, SIEM & Threat Detection
+
+--- Slide 12 ---
+  [PLACEHOLDER (14)] Vulnerability & Risk Management
+
+--- Slide 13 ---
+  [PLACEHOLDER (14)] Data Protection & Privacy
+
+--- Slide 14 ---
+  [PLACEHOLDER (14)] Compliance & GRC
+
+--- Slide 15 ---
+  [PLACEHOLDER (14)] Summary & Differentiators
+
+--- Slide 16 ---
+  [PLACEHOLDER (14)] Thank You / Contact Info
+
+=== Layouts ===
+  Layout 0: Title Slide
+  Layout 1: Title and Content
+  Layout 2: Section Header
+  Layout 3: Two Content
+  Layout 4: Comparison
+  Layout 5: Title Only
+  Layout 6: Blank
+  Layout 7: Content with Caption
+  Layout 8: Picture with Caption
+  Layout 9: Title and Vertical Text
+  Layout 10: Vertical Title and Text

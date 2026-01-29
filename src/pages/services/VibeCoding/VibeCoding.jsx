@@ -393,19 +393,27 @@ const VibeCoding = memo(function VibeCoding() {
                     <FadeIn>
                         <div className="stack-grid-detailed">
                             {[
-                                { name: 'Cursor', desc: 'The AI-native editor that understands your entire codebase context.' },
-                                { name: 'Replit Agent', desc: 'From idea to deployed app in a single conversation.' },
-                                { name: 'Windsurf', desc: 'Deep-flow coding with agentic capabilities.' },
-                                { name: 'Claude 3.5', desc: 'The reasoning engine that powers our logic generation.' },
-                                { name: 'Lovable', desc: 'Instant full-stack web apps from natural language.' },
-                                { name: 'v0.dev', desc: 'Generative UI for rapid component iteration.' },
-                                { name: 'Cline', desc: 'Autonomous terminal agent for complex file manipulations.' },
-                                { name: 'Antigravity', desc: "Google Deepmind's advanced agentic coding assistant." },
-                                { name: 'Code Buddy', desc: 'Collaborative AI partner for seamless development flows.' }
+                                { name: 'Cursor', desc: 'The AI-native editor that understands your entire codebase context.', url: 'https://cursor.com' },
+                                { name: 'Replit Agent', desc: 'From idea to deployed app in a single conversation.', url: 'https://replit.com' },
+                                { name: 'Windsurf', desc: 'Deep-flow coding with agentic capabilities.', url: 'https://windsurf.ai' },
+                                { name: 'Claude 3.5', desc: 'The reasoning engine that powers our logic generation.', url: 'https://claude.ai' },
+                                { name: 'Lovable', desc: 'Instant full-stack web apps from natural language.', url: 'https://lovable.dev' },
+                                { name: 'v0.dev', desc: 'Generative UI for rapid component iteration.', url: 'https://v0.dev' },
+                                { name: 'Cline', desc: 'Autonomous terminal agent for complex file manipulations.', url: 'https://cline.bot' },
+                                { name: 'Antigravity', desc: "Google Deepmind's advanced agentic coding assistant.", url: 'https://deepmind.google' },
+                                { name: 'Code Buddy', desc: 'Collaborative AI partner for seamless development flows.', url: 'https://codebuddy.ca' }
                             ].map((tech, i) => (
                                 <div key={i} className="stack-card-detailed">
                                     <h4>{tech.name}</h4>
                                     <p>{tech.desc}</p>
+                                    <a
+                                        href={tech.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="read-more-link"
+                                    >
+                                        Read More <FiArrowRight />
+                                    </a>
                                 </div>
                             ))}
                         </div>

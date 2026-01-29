@@ -825,12 +825,33 @@
     box-shadow: var(--shadow-sm);
     text-align: left;
     transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .stack-card-detailed:hover {
     transform: translateY(-3px);
     border-color: var(--color-primary-light);
     box-shadow: var(--shadow-md);
+}
+
+.read-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: auto;
+    align-self: flex-end;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.read-more-link:hover {
+    opacity: 0.8;
+    transform: translateX(3px);
 }
 
 .stack-card-detailed h4 {
